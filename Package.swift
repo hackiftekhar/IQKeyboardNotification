@@ -18,6 +18,10 @@ let package = Package(
             path: "IQKeyboardNotification",
             resources: [
                 .copy("Assets/PrivacyInfo.xcprivacy")
+            ],
+            linkerSettings: [
+                .linkedFramework("Combine"),
+                .linkedFramework("UIKit")
             ]
         )
     ]

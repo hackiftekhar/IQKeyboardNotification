@@ -28,7 +28,7 @@ import Combine
 @MainActor
 public class IQKeyboardNotification {
 
-    private var cancellable: Set<AnyCancellable> = []
+    private var storage: Set<AnyCancellable> = []
 
     private var eventObservers: [IQKeyboardInfo.Event: [AnyHashable: SizeCompletion]] = [:]
 
@@ -53,13 +53,13 @@ public class IQKeyboardNotification {
     public init() {
         keyboardInfo = IQKeyboardInfo(notification: nil, event: .didHide)
         oldKeyboardInfo = keyboardInfo
-        //  Registering for keyboard notification.
 
+        //  Registering for keyboard notification.
         for event in IQKeyboardInfo.Event.allCases {
             NotificationCenter.default.publisher(for: event.notification)
                 .map({ IQKeyboardInfo(notification: $0, event: event) })
                 .assign(to: \.keyboardInfo, on: self)
-                .store(in: &cancellable)
+                .store(in: &storage)
         }
     }
 

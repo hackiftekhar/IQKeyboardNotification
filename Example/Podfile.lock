@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IQKeyboardNotification: ea25ded99a3e7f2c461072555dc0634d45cc19ef
+  IQKeyboardNotification: 1a8b57657be43ed69891d573aa45a0c05b4e37c4
 
 PODFILE CHECKSUM: a2c5c2360c8ed099ea300c9853265b38c84a12a4
 

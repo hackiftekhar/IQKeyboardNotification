@@ -23,7 +23,7 @@ pod 'IQKeyboardNotification'
 
 ## Author
 
-hackiftekhar, 133005545+ideviftekhar@users.noreply.github.com
+Iftekhar Qurashi hack.iftekhar@gmail.com
 
 ## License
 
