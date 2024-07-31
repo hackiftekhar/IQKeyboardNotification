@@ -6,7 +6,7 @@ Lightweight library to observe keyboard events with ease.
 [![License](https://img.shields.io/cocoapods/l/IQKeyboardNotification.svg?style=flat)](https://cocoapods.org/pods/IQKeyboardNotification)
 [![Platform](https://img.shields.io/cocoapods/p/IQKeyboardNotification.svg?style=flat)](https://cocoapods.org/pods/IQKeyboardNotification)
 
-[![Screenshot](https://raw.githubusercontent.com/hackiftekhar/IQKeyboardManager/master/Screenshot/IQKeyboardNotificationScreenshot.png)]
+[![Screenshot](https://raw.githubusercontent.com/hackiftekhar/IQKeyboardNotification/master/Screenshot/IQKeyboardNotificationScreenshot.png)]
 
 ## Example
 
@@ -29,7 +29,7 @@ Iftekhar Qurashi hack.iftekhar@gmail.com
 
 ## Flow
 
-[![Screenshot](https://raw.githubusercontent.com/hackiftekhar/IQKeyboardManager/master/Screenshot/FlowDiagram.jpg)]
+[![Screenshot](https://raw.githubusercontent.com/hackiftekhar/IQKeyboardNotification/master/Screenshot/FlowDiagram.jpg)]
 
 ## License
 
