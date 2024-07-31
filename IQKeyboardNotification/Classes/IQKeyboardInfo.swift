@@ -24,7 +24,6 @@
 import UIKit
 
 @available(iOSApplicationExtension, unavailable)
-@MainActor
 public struct IQKeyboardInfo: Equatable {
     nonisolated public static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.event == rhs.event &&
@@ -137,6 +136,7 @@ public struct IQKeyboardInfo: Equatable {
         }
     }
 
+    @MainActor
     public func animate(alongsideTransition transition: @escaping () -> Void, completion: (() -> Void)? = nil) {
 
         /* ******* */
@@ -176,6 +176,7 @@ public struct IQKeyboardInfo: Equatable {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension IQKeyboardInfo {
     static func getKeyboardFrame(of rect: CGRect, inScreenBounds screenBounds: CGRect) -> CGRect {
         var finalFrame: CGRect = rect

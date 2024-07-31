@@ -69,9 +69,10 @@ public class IQKeyboardNotification {
 }
 
 @available(iOSApplicationExtension, unavailable)
+@MainActor
 public extension IQKeyboardNotification {
 
-    typealias SizeCompletion = (_ event: IQKeyboardInfo.Event, _ size: CGSize) -> Void
+    typealias SizeCompletion = (_ event: IQKeyboardInfo.Event, _ endFrame: CGRect) -> Void
 
     func subscribe(for events: [IQKeyboardInfo.Event] = IQKeyboardInfo.Event.allCases,
                    identifier: AnyHashable, changeHandler: @escaping SizeCompletion) {
@@ -84,7 +85,7 @@ public extension IQKeyboardNotification {
 
         // If current event is the one user is subscribed to, then call changeHandler immediately for the first time.
         if events.contains(keyboardInfo.event) {
-            changeHandler(keyboardInfo.event, keyboardInfo.endFrame.size)
+            changeHandler(keyboardInfo.event, keyboardInfo.endFrame)
         }
     }
 
@@ -117,10 +118,10 @@ public extension IQKeyboardNotification {
 
         guard let observers = eventObservers[info.event], !observers.isEmpty else { return }
 
-        let size: CGSize = info.endFrame.size
+        let endFrame: CGRect = info.endFrame
 
         for block in observers.values {
-            block(info.event, size)
+            block(info.event, endFrame)
         }
     }
 }
