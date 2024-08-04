@@ -26,7 +26,7 @@ import Combine
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-public class IQKeyboardNotification {
+@objc public final class IQKeyboardNotification: NSObject {
 
     private var storage: Set<AnyCancellable> = []
 
@@ -42,17 +42,18 @@ public class IQKeyboardNotification {
         }
     }
 
-    public var isVisible: Bool {
+    @objc public var isVisible: Bool {
         keyboardInfo.isVisible
     }
 
-    public var frame: CGRect {
+    @objc public var frame: CGRect {
         keyboardInfo.endFrame
     }
 
-    public init() {
+    @objc public override init() {
         keyboardInfo = IQKeyboardInfo(notification: nil, event: .didHide)
         oldKeyboardInfo = keyboardInfo
+        super.init()
 
         //  Registering for keyboard notification.
         for event in IQKeyboardInfo.Event.allCases {
@@ -63,7 +64,7 @@ public class IQKeyboardNotification {
         }
     }
 
-    public func animate(alongsideTransition transition: @escaping () -> Void, completion: (() -> Void)? = nil) {
+    @objc public func animate(alongsideTransition transition: @escaping () -> Void, completion: (() -> Void)? = nil) {
         keyboardInfo.animate(alongsideTransition: transition, completion: completion)
     }
 }
@@ -125,3 +126,22 @@ public extension IQKeyboardNotification {
         }
     }
 }
+
+@available(iOSApplicationExtension, unavailable)
+@MainActor
+public extension IQKeyboardNotification {
+
+    @available(*, unavailable, renamed: "subscribe(identifier:changeHandler:)")
+    @objc func registerSizeChange(identifier: AnyHashable, changeHandler: @escaping SizeCompletion) {
+        subscribe(identifier: identifier, changeHandler: changeHandler)
+    }
+
+    @available(*, deprecated, renamed: "unsubscribe(identifier:)")
+    @objc func unavailable(identifier: AnyHashable) {
+        unsubscribe(identifier: identifier)
+    }
+}
+
+@available(*, unavailable, renamed: "IQKeyboardNotification")
+@MainActor
+@objc public final class IQKeyboardListener: NSObject {}
