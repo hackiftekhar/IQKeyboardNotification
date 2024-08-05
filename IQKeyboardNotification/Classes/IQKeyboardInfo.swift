@@ -195,13 +195,3 @@ private extension IQKeyboardInfo {
         return finalFrame
     }
 }
-
-@available(iOSApplicationExtension, unavailable)
-public extension IQKeyboardInfo {
-
-    @available(*, unavailable, renamed: "event")
-    var name: Event { event }
-
-    @available(*, unavailable, renamed: "isVisible")
-    var keyboardShowing: Bool { isVisible }
-}

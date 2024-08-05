@@ -126,22 +126,3 @@ public extension IQKeyboardNotification {
         }
     }
 }
-
-@available(iOSApplicationExtension, unavailable)
-@MainActor
-public extension IQKeyboardNotification {
-
-    @available(*, unavailable, renamed: "subscribe(identifier:changeHandler:)")
-    @objc func registerSizeChange(identifier: AnyHashable, changeHandler: @escaping SizeCompletion) {
-        subscribe(identifier: identifier, changeHandler: changeHandler)
-    }
-
-    @available(*, deprecated, renamed: "unsubscribe(identifier:)")
-    @objc func unavailable(identifier: AnyHashable) {
-        unsubscribe(identifier: identifier)
-    }
-}
-
-@available(*, unavailable, renamed: "IQKeyboardNotification")
-@MainActor
-@objc public final class IQKeyboardListener: NSObject {}
