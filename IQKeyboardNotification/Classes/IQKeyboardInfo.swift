@@ -195,3 +195,33 @@ private extension IQKeyboardInfo {
         return finalFrame
     }
 }
+
+@available(iOSApplicationExtension, unavailable)
+@objcMembers public class IQKeyboardInfoObjC: NSObject {
+    private let wrappedValue: IQKeyboardInfo
+
+    public var event: IQKeyboardInfo.Event { wrappedValue.event }
+
+    public var isLocal: Bool { wrappedValue.isLocal }
+
+    public var beginFrame: CGRect { wrappedValue.beginFrame }
+
+    public var endFrame: CGRect { wrappedValue.endFrame }
+
+    public var animationDuration: TimeInterval { wrappedValue.animationDuration }
+
+    public var animationCurve: UIView.AnimationCurve { wrappedValue.animationCurve }
+
+    public var animationOptions: UIView.AnimationOptions { wrappedValue.animationOptions }
+
+    public var isVisible: Bool { wrappedValue.isVisible }
+
+    init(wrappedValue: IQKeyboardInfo){
+        self.wrappedValue = wrappedValue
+    }
+
+    @MainActor
+    public func animate(alongsideTransition transition: @escaping () -> Void, completion: (() -> Void)? = nil) {
+        wrappedValue.animate(alongsideTransition: transition, completion: completion)
+    }
+}

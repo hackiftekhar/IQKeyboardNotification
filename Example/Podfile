@@ -4,10 +4,8 @@ platform :ios, '13.0'
 
 target 'IQKeyboardNotification_Example' do
   pod 'IQKeyboardNotification', :path => '../'
+end
 
-  target 'IQKeyboardNotification_Tests' do
-    inherit! :search_paths
-
-    
-  end
+target 'IQKeyboardNotification_ObjcExample' do
+  pod 'IQKeyboardNotification', :path => '../'
 end

@@ -1,5 +1,5 @@
 PODS:
-  - IQKeyboardNotification (1.0.1)
+  - IQKeyboardNotification (1.0.2)
 
 DEPENDENCIES:
   - IQKeyboardNotification (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IQKeyboardNotification: bd598aaada34600592a38a0310cfb15626dc4ebf
+  IQKeyboardNotification: 846ce32be151e2f4c48b595aee15605c8f35cad6
 
-PODFILE CHECKSUM: a2c5c2360c8ed099ea300c9853265b38c84a12a4
+PODFILE CHECKSUM: a757b4de4dd99db223f7b746b8b6564ed70d3d16
 
 COCOAPODS: 1.15.2

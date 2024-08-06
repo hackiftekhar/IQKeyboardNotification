@@ -26,7 +26,7 @@ import Combine
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-@objc public final class IQKeyboardNotification: NSObject {
+@objcMembers public final class IQKeyboardNotification: NSObject {
 
     private var storage: Set<AnyCancellable> = []
 
@@ -42,15 +42,15 @@ import Combine
         }
     }
 
-    @objc public var isVisible: Bool {
+    public var isVisible: Bool {
         keyboardInfo.isVisible
     }
 
-    @objc public var frame: CGRect {
+    public var frame: CGRect {
         keyboardInfo.endFrame
     }
 
-    @objc public override init() {
+    public override init() {
         keyboardInfo = IQKeyboardInfo(notification: nil, event: .didHide)
         oldKeyboardInfo = keyboardInfo
         super.init()
@@ -64,7 +64,7 @@ import Combine
         }
     }
 
-    @objc public func animate(alongsideTransition transition: @escaping () -> Void, completion: (() -> Void)? = nil) {
+    public func animate(alongsideTransition transition: @escaping () -> Void, completion: (() -> Void)? = nil) {
         keyboardInfo.animate(alongsideTransition: transition, completion: completion)
     }
 }
@@ -75,7 +75,7 @@ public extension IQKeyboardNotification {
 
     typealias SizeCompletion = (_ event: IQKeyboardInfo.Event, _ endFrame: CGRect) -> Void
 
-    func subscribe(for events: [IQKeyboardInfo.Event] = IQKeyboardInfo.Event.allCases,
+    func subscribe(for events: [IQKeyboardInfo.Event],
                    identifier: AnyHashable, changeHandler: @escaping SizeCompletion) {
 
         for event in events {
@@ -90,7 +90,7 @@ public extension IQKeyboardNotification {
         }
     }
 
-    func unsubscribe(for events: [IQKeyboardInfo.Event] = IQKeyboardInfo.Event.allCases, identifier: AnyHashable) {
+    func unsubscribe(for events: [IQKeyboardInfo.Event], identifier: AnyHashable) {
 
         for event in events {
             var existingObservers: [AnyHashable: SizeCompletion] = eventObservers[event] ?? [:]
@@ -124,5 +124,26 @@ public extension IQKeyboardNotification {
         for block in observers.values {
             block(info.event, endFrame)
         }
+    }
+}
+
+@available(iOSApplicationExtension, unavailable)
+@MainActor
+@objc public extension IQKeyboardNotification {
+
+    var oldKeyboardInfoObjc: IQKeyboardInfoObjC { IQKeyboardInfoObjC(wrappedValue: oldKeyboardInfo) }
+
+    var keyboardInfoObjc: IQKeyboardInfoObjC { IQKeyboardInfoObjC(wrappedValue: keyboardInfo) }
+
+    func subscribe(identifier: AnyHashable, changeHandler: @escaping SizeCompletion) {
+        subscribe(for: IQKeyboardInfo.Event.allCases, identifier: identifier, changeHandler: changeHandler)
+    }
+
+    func unsubscribe(identifier: AnyHashable) {
+        unsubscribe(for: IQKeyboardInfo.Event.allCases, identifier: identifier)
+    }
+
+    func isSubscribed(identifier: AnyHashable) -> Bool {
+        isSubscribed(for: nil, identifier: identifier)
     }
 }
