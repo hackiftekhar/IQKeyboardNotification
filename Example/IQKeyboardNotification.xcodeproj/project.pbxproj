@@ -15,8 +15,6 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		918DA5481263A51948307553 /* Pods_IQKeyboardNotification_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD24B5947BCBC742E698071 /* Pods_IQKeyboardNotification_Example.framework */; };
 		B85F5E02D363FB59F2D7C25C /* Pods_IQKeyboardNotification_ObjcExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3C5898C378662EE085BA54 /* Pods_IQKeyboardNotification_ObjcExample.framework */; };
-		C01ED10A2C6A3D0C004BA157 /* IQKeyboardNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01ED1042C6A3D0C004BA157 /* IQKeyboardNotification.framework */; };
-		C01ED10B2C6A3D0C004BA157 /* IQKeyboardNotification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C01ED1042C6A3D0C004BA157 /* IQKeyboardNotification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C01ED1192C6A3D2D004BA157 /* IQKeyboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1132C6A3D2D004BA157 /* IQKeyboardInfo.swift */; };
 		C01ED11A2C6A3D2D004BA157 /* IQKeyboardNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1142C6A3D2D004BA157 /* IQKeyboardNotification.swift */; };
 		C01ED11C2C6A3D2D004BA157 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C01ED1172C6A3D2D004BA157 /* PrivacyInfo.xcprivacy */; };
@@ -37,28 +35,7 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = IQKeyboardNotification;
 		};
-		C01ED1082C6A3D0C004BA157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C01ED1032C6A3D0C004BA157;
-			remoteInfo = "IQKeyboardNotification-iOS";
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C01ED10C2C6A3D0C004BA157 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C01ED10B2C6A3D0C004BA157 /* IQKeyboardNotification.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		365EC8C36FB71BE2B21E3E46 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -105,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01ED10A2C6A3D0C004BA157 /* IQKeyboardNotification.framework in Frameworks */,
 				918DA5481263A51948307553 /* Pods_IQKeyboardNotification_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,12 +274,10 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				2006001E53C8AAE50A81D6E8 /* [CP] Embed Pods Frameworks */,
-				C01ED10C2C6A3D0C004BA157 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C01ED1092C6A3D0C004BA157 /* PBXTargetDependency */,
 			);
 			name = IQKeyboardNotification_Example;
 			productName = IQKeyboardNotification;
@@ -584,11 +558,6 @@
 			target = 607FACCF1AFB9204008FA782 /* IQKeyboardNotification_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
-		C01ED1092C6A3D0C004BA157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C01ED1032C6A3D0C004BA157 /* IQKeyboardNotification */;
-			targetProxy = C01ED1082C6A3D0C004BA157 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -826,7 +795,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 CocoaPods. All rights reserved.";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
@@ -871,7 +840,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 CocoaPods. All rights reserved.";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
