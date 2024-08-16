@@ -163,17 +163,6 @@ public struct IQKeyboardInfo: Equatable {
     }
 }
 
-// MARK: Deprecated
-@available(iOSApplicationExtension, unavailable)
-public extension IQKeyboardInfo {
-
-    @available(*, unavailable, renamed: "event")
-    var name: Event { event }
-
-    @available(*, unavailable, renamed: "isVisible")
-    var keyboardShowing: Bool { isVisible }
-}
-
 @available(iOSApplicationExtension, unavailable)
 private extension IQKeyboardInfo {
 
@@ -224,3 +213,15 @@ private extension IQKeyboardInfo {
         wrappedValue.animate(alongsideTransition: transition, completion: completion)
     }
 }
+
+// MARK: Deprecated
+@available(iOSApplicationExtension, unavailable)
+public extension IQKeyboardInfo {
+
+    @available(*, unavailable, renamed: "event")
+    var name: Event { event }
+
+    @available(*, unavailable, renamed: "isVisible")
+    var keyboardShowing: Bool { isVisible }
+}
+
