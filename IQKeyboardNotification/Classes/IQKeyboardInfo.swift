@@ -139,19 +139,6 @@ public struct IQKeyboardInfo: Equatable {
     @MainActor
     public func animate(alongsideTransition transition: @escaping () -> Void, completion: (() -> Void)? = nil) {
 
-        /* ******* */
-//        UIView.beginAnimations(nil, context: nil)
-//        UIView.setAnimationDuration(duration)
-//        UIView.setAnimationCurve(curve)
-//        UIView.setAnimationBeginsFromCurrentState(true)
-//        UIView.setAnimationDelegate(self)
-//        UIView.setAnimationDidStop(#selector(UIViewController.keyboardAnimationDidStop(_:finished:context:)))
-//
-//        keyboardStateDelegate?.keyboardTransitionAnimation(state)
-//
-//        UIView.commitAnimations()
-
-        /* ******* */
 //        if let timing = UIView.AnimationCurve.RawValue(exactly: animationCurve.rawValue),
 //           let curve = UIView.AnimationCurve(rawValue: timing) {
 //            let animator = UIViewPropertyAnimator(duration: animationDuration, curve: curve) {
@@ -176,8 +163,20 @@ public struct IQKeyboardInfo: Equatable {
     }
 }
 
+// MARK: Deprecated
+@available(iOSApplicationExtension, unavailable)
+public extension IQKeyboardInfo {
+
+    @available(*, unavailable, renamed: "event")
+    var name: Event { event }
+
+    @available(*, unavailable, renamed: "isVisible")
+    var keyboardShowing: Bool { isVisible }
+}
+
 @available(iOSApplicationExtension, unavailable)
 private extension IQKeyboardInfo {
+
     static func getKeyboardFrame(of rect: CGRect, inScreenBounds screenBounds: CGRect) -> CGRect {
         var finalFrame: CGRect = rect
         // If this is floating keyboard

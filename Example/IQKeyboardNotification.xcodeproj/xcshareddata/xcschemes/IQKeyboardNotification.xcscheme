@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C01ED1032C6A3D0C004BA157"
-               BuildableName = "IQKeyboardNotification_iOS.framework"
+               BuildableName = "IQKeyboardNotification.framework"
                BlueprintName = "IQKeyboardNotification-iOS"
                ReferencedContainer = "container:IQKeyboardNotification.xcodeproj">
             </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C01ED1032C6A3D0C004BA157"
-            BuildableName = "IQKeyboardNotification_iOS.framework"
+            BuildableName = "IQKeyboardNotification.framework"
             BlueprintName = "IQKeyboardNotification-iOS"
             ReferencedContainer = "container:IQKeyboardNotification.xcodeproj">
          </BuildableReference>
