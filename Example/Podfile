@@ -4,6 +4,7 @@ platform :ios, '13.0'
 
 target 'IQKeyboardNotification_Example' do
   pod 'IQKeyboardNotification', :path => '../'
+  pod "SwiftLint"
 end
 
 target 'IQKeyboardNotification_ObjcExample' do

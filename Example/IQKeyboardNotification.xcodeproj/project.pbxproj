@@ -58,10 +58,8 @@
 		B58A5BA5CCDA105A8B68A13F /* Pods-IQKeyboardNotification_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IQKeyboardNotification_Example.debug.xcconfig"; path = "Target Support Files/Pods-IQKeyboardNotification_Example/Pods-IQKeyboardNotification_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BA3C5898C378662EE085BA54 /* Pods_IQKeyboardNotification_ObjcExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IQKeyboardNotification_ObjcExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01ED1042C6A3D0C004BA157 /* IQKeyboardNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C01ED1122C6A3D2D004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C01ED1132C6A3D2D004BA157 /* IQKeyboardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardInfo.swift; sourceTree = "<group>"; };
 		C01ED1142C6A3D2D004BA157 /* IQKeyboardNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardNotification.swift; sourceTree = "<group>"; };
-		C01ED1162C6A3D2D004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C01ED1172C6A3D2D004BA157 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C075E8F62C62271A00951BB3 /* IQKeyboardNotification_ObjcExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQKeyboardNotification_ObjcExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C075E8F82C62271A00951BB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 		C01ED1112C6A3D2D004BA157 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C01ED1122C6A3D2D004BA157 /* .gitkeep */,
 				C01ED1132C6A3D2D004BA157 /* IQKeyboardInfo.swift */,
 				C01ED1142C6A3D2D004BA157 /* IQKeyboardNotification.swift */,
 			);
@@ -219,7 +216,6 @@
 		C01ED1152C6A3D2D004BA157 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C01ED1162C6A3D2D004BA157 /* .gitkeep */,
 				C01ED1172C6A3D2D004BA157 /* PrivacyInfo.xcprivacy */,
 			);
 			path = Assets;
@@ -273,6 +269,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				C0620C462C746BEE006AE1CE /* Swiftlint */,
 				2006001E53C8AAE50A81D6E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -465,6 +462,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IQKeyboardNotification_ObjcExample/Pods-IQKeyboardNotification_ObjcExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C0620C462C746BEE006AE1CE /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		D7A9F386D19C79118B198499 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
