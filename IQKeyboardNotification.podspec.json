@@ -1,9 +1,9 @@
 {
     "name": "IQKeyboardNotification",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "source": {
         "git": "https://github.com/hackiftekhar/IQKeyboardNotification.git",
-        "tag": "1.0.3"
+        "tag": "1.0.5"
     },
     "summary": "Easy Keyboard Event Subscription",
     "description": "Lightweight library to observe keyboard events with ease.",
