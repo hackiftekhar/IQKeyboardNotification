@@ -34,5 +34,8 @@
         "Combine",
         "UIKit"
     ],
+    "xcconfig": {
+        "ENABLE_USER_SCRIPT_SANDBOXING": "NO"
+    },
     "requires_arc": true
 }
