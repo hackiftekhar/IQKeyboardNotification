@@ -122,11 +122,27 @@ public struct IQKeyboardInfo: Equatable {
                 beginFrame = CGRect(x: 0, y: screenBounds.height, width: screenBounds.width, height: 0)
             }
 
+            var endFrame: CGRect
             if let endKeyboardFrame: CGRect = info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
                 endFrame = Self.getKeyboardFrame(of: endKeyboardFrame, inScreenBounds: screenBounds)
             } else {
                 endFrame = CGRect(x: 0, y: screenBounds.height, width: screenBounds.width, height: 0)
             }
+
+            // With iOS 26, the endFrame returns height equal to the input accessory view height even when keyboard is dismissed.
+            // Unfortunately we have to assume this hack for iOS 26.
+    #if compiler(>=6.2) // Xcode 26
+            if #available(iOS 26.0, *) {
+                switch event {
+                case .willHide, .didHide:
+                    endFrame.origin.y += endFrame.size.height
+                    endFrame.size.height = 0
+                case .willShow, .didShow, .willChangeFrame, .didChangeFrame:
+                    break
+                }
+            }
+    #endif
+            self.endFrame = endFrame
         } else {
             isLocal = true
             animationCurve = .easeOut

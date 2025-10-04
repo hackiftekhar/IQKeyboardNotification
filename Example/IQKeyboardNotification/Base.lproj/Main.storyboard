@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MpV-1f-Bay">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MpV-1f-Bay">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-bC-aBa">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="172" width="393" height="680"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="82z-EZ-weJ">
                                         <rect key="frame" x="20" y="0.0" width="353" height="409.66666666666669"/>
@@ -33,7 +33,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="LOL-fN-Gfg">
-                                                <rect key="frame" x="0.0" y="8.6666666666666696" width="353" height="19.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="8.6666666666666554" width="353" height="19.333333333333329"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4q-VE-8jn">
                                                         <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="19.333333333333332"/>
@@ -131,14 +131,14 @@
                                                 </subviews>
                                             </stackView>
                                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EX3-05-MPZ">
-                                                <rect key="frame" x="0.0" y="108.33333333333334" width="353" height="0.3333333333333286"/>
+                                                <rect key="frame" x="0.0" y="108.33333333333331" width="353" height="0.3333333333333286"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="iIk-3b-QtV"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="z3o-BG-sfg">
-                                                <rect key="frame" x="0.0" y="116.66666666666666" width="353" height="19.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="116.66666666666669" width="353" height="19.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Frame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0m-lc-rnN">
                                                         <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="19.333333333333332"/>
@@ -162,7 +162,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bT2-em-A73">
-                                                <rect key="frame" x="0.0" y="152.66666666666666" width="353" height="20"/>
+                                                <rect key="frame" x="0.0" y="152.66666666666669" width="353" height="20"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="KoB-22-UM3">
                                                         <rect key="frame" x="0.0" y="0.0" width="168.33333333333334" height="20"/>
@@ -257,7 +257,7 @@
                                                 </connections>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bpm-7A-o2Y">
-                                                <rect key="frame" x="0.0" y="349.66666666666669" width="353" height="60"/>
+                                                <rect key="frame" x="0.0" y="349.66666666666663" width="353" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="zZ8-0s-kDx"/>
@@ -306,6 +306,10 @@
                         <outlet property="isLocalLabel" destination="Fmx-vg-A4e" id="b0V-tk-Tvm"/>
                         <outlet property="isVisibleLabel" destination="wvT-cB-R2j" id="yHM-IH-R5b"/>
                         <outlet property="scrollViewBottomConstraint" destination="lpX-gV-DJG" id="JZW-jc-Skg"/>
+                        <outlet property="textField1" destination="Xso-8X-KAH" id="xwC-YV-WpP"/>
+                        <outlet property="textField2" destination="rZ0-t3-9O6" id="oa2-ix-tCw"/>
+                        <outlet property="textView1" destination="OSH-qo-Uce" id="DxL-pT-N6t"/>
+                        <outlet property="textView2" destination="Bpm-7A-o2Y" id="R9p-1H-3nx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -318,7 +322,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MpV-1f-Bay" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Eeg-dE-24L">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
